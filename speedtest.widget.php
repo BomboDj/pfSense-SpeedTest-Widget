@@ -18,13 +18,13 @@
  *     Diagnotics -> Command Prompt -> Execute Shell Command:
  *         mv -f /tmp/speedtest.widget.php /usr/local/www/widgets/widgets/
  *     Status -> Dashboard:
- *         Add the speedtest widget.
+ *         Add the speedtest widget
  *
  *
  * UNINSTALL
  *
  *     Status -> Dashboard:
- *         Remove the speedtest widget.
+ *         Remove the speedtest widget
  *     Diagnotics -> Command Prompt -> Execute Shell Command:
  *         rm -f /usr/local/www/widgets/widgets/speedtest.widget.php
  *     Diagnotics -> Command Prompt -> Execute Shell Command:
