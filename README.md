@@ -3,8 +3,9 @@
 This widget measures WAN connection performance using the speedtest-go package by showwin. It can automatically identify and use the most suitable Speedtest server based on network conditions, or it can be configured to run tests against a specific server selected by the user. This flexibility ensures both accurate speed measurements and reproducible test results when required.This widget measures WAN connection performance using the speedtest-go package by showwin. It can automatically identify and use the most suitable Speedtest server based on network conditions, or it can be configured to run tests against a specific server selected by the user. This flexibility ensures both accurate speed measurements and reproducible test results when required.
 
 Based on:
-  “speedtest-go” utility by showwin (https://github.com/showwin/speedtest-go)
-  “pfsense-speedtest-widget” widget by LeonStraathof (https://github.com/LeonStraathof/pfsense-speedtest-widget)
+
+		- “speedtest-go” utility by showwin (https://github.com/showwin/speedtest-go)
+		- “pfsense-speedtest-widget” widget by LeonStraathof (https://github.com/LeonStraathof/pfsense-speedtest-widget)
 
 
 INSTALL
