@@ -16,7 +16,7 @@ INSTALL
     Diagnotics -> Command Prompt -> Execute Shell Command:
         mv -f /tmp/speedtest.widget.php /usr/local/www/widgets/widgets/
     Status -> Dashboard:
-        Add the speedtest widget.
+        Add the speedtest widget
 
 
 UNINSTALL
