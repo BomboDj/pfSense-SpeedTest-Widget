@@ -197,9 +197,9 @@ $initialResults = json_encode($results);
 ?>
 <table class="table">
 	<tr>
-		<td><b id="speedtest-ping">N/A</b></td>
-		<td><font color="#00a8f3"><i class="fa fa-arrow-down"></i></font> <b id="speedtest-download">N/A</b></td>
-		<td><font color="#ff7f0e"><i class="fa fa-arrow-up"></i></font> <b id="speedtest-upload">N/A</b></td>
+		<td style="width:25%"><font color="#40ab56"><i class="fas fa-ellipsis-h"></i></font> <b id="speedtest-ping">N/A</b></td>
+		<td style="width:25%"><font color="#00a8f3"><i class="fas fa-arrow-down"></i></font> <b id="speedtest-download">N/A</b></td>
+		<td style="width:50%"><font color="#ff7f0e"><i class="fas fa-arrow-up"></i></font> <b id="speedtest-upload">N/A</b></td>
 	</tr>
 	<tr>
 		<td>Packetloss</td>
@@ -216,6 +216,7 @@ $initialResults = json_encode($results);
 				<option value="0">= AUTOSELECT AND REFRESH SERVER LIST =</option>
 			</select>
 		</td>
+		<td style="width:1%"</td>
 	</tr>
 	<tr>
 		<td colspan="3" id="speedtest-ts" style="font-size: 0.8em;">&nbsp;</td>
@@ -240,7 +241,7 @@ function update_result(results) {
 
 	var date = new Date(results.timestamp.replace(" ", "T") + "Z");
 	$("#speedtest-ts").text(date);
-	$("#speedtest-ping").html("<small>Ping </small>" + Number(results.ping.latency).toFixed(2) + "<small> ms</small>");
+	$("#speedtest-ping").html(Number(results.ping.latency).toFixed(2) + "<small> ms</small>");
 	$("#speedtest-download").html((Number(results.download.bandwidth) / 1000000 * 8).toFixed(2) + "<small> Mbps</small>");
 	$("#speedtest-upload").html((Number(results.upload.bandwidth) / 1000000 * 8).toFixed(2) + "<small> Mbps</small>");
 	$("#speedtest-packetloss").text(Number(results.packetLoss) < 0 ? "N/A" : Number(results.packetLoss).toFixed(2) + "%");
@@ -252,7 +253,7 @@ function update_result(results) {
 		value: current.id,
 		text: (current.sponsor || "Server") + " [" + current.id + "] " +
 			(current.location || current.name || "") + " " + (current.country || "") +
-			" (" + Number(results.ping.latency).toFixed(2) + "ms)"
+			" (" + Number(results.ping.latency).toFixed(2) + " ms)"
 	})).val(current.id);
 	select.append($('<option>', {
 		value: 0,
@@ -268,7 +269,7 @@ function update_result(results) {
 			value: entry.server.id,
 			text: (entry.server.sponsor || "Server") + " [" + entry.server.id + "] " +
 				(entry.server.location || entry.server.name || "") + " " + (entry.server.country || "") +
-				" (" + (isFinite(latency) ? latency.toFixed(2) + "ms" : "N/A") + ")"
+				" (" + (isFinite(latency) ? latency.toFixed(2) + " ms" : "N/A") + ")"
 		}));
 	});
 }
