@@ -197,8 +197,8 @@ $initialResults = json_encode($results);
 ?>
 <table class="table">
 	<tr>
-		<td style="width:25%"><font color="#40ab56"><i class="fas fa-ellipsis-h"></i></font> <b id="speedtest-ping">N/A</b></td>
-		<td style="width:25%"><font color="#00a8f3"><i class="fas fa-arrow-down"></i></font> <b id="speedtest-download">N/A</b></td>
+		<td style="width:20%"><font color="#40ab56"><i class="fas fa-ellipsis-h"></i></font> <b id="speedtest-ping">N/A</b></td>
+		<td style="width:30%"><font color="#00a8f3"><i class="fas fa-arrow-down"></i></font> <b id="speedtest-download">N/A</b></td>
 		<td style="width:50%"><font color="#ff7f0e"><i class="fas fa-arrow-up"></i></font> <b id="speedtest-upload">N/A</b></td>
 	</tr>
 	<tr>
